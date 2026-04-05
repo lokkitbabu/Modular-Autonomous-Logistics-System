@@ -1,10 +1,10 @@
-# MALN: Modular Autonomous Logistics Nodes
+# Modular Autonomous Logistics System
 
-## A Whitepaper on Hybrid, Attritable, Multi-Domain Resupply for Contested Environments
+## A Whitepaper on Multi-Domain Resupply for Contested Environments
 
 ### Abstract
 
-Modern warfighting has evolved beyond the capabilities of centralized logistics infrastructure. With the proliferation of GPS-denial, electronic warfare, and distributed operations, the ability to autonomously deliver critical supplies in the final tactical mile has become a strategic imperative. MALN (Modular Autonomous Logistics Nodes) is a proposed hybrid logistics architecture combining a centralized orchestration system with swarms of low-cost, modular, expendable vehicles for land, air, and sea domains. This whitepaper outlines the hybrid system architecture, dual-layer economic model, capabilities, and deployment strategy.
+Modern warfighting has evolved beyond the capabilities of centralized logistics infrastructure. With GPS-denial, electronic warfare, and distributed operations, the ability to autonomously deliver critical supplies in the final tactical mile has become a strategic imperative. This proposal outlines a hybrid logistics architecture combining a centralized orchestration system with swarms of low-cost, modular, expendable vehicles for land, air, and sea domains. This whitepaper outlines the hybrid system architecture, economic model, capabilities, and deployment strategy.
 
 ---
 
@@ -12,7 +12,7 @@ Modern warfighting has evolved beyond the capabilities of centralized logistics 
 
 Conventional military logistics relies on centralized supply chains, vulnerable convoys, and human-in-the-loop delivery. The Ukraine war, Indo-Pacific theater planning, and emerging distributed lethality doctrines highlight a need for highly adaptable, field-repairable, and autonomous logistics infrastructure that can operate in degraded or disconnected environments.
 
-MALN addresses this with a deliberately bifurcated system design:
+We addresses this with a deliberately split system design:
 
 - **Fixed System and Infrastructure Layer:** A centralized Mission Operating System (MOS) that handles orchestration, routing, DDIL resilience, and tasking, plus ruggedized hives and standards that serve as durable platform assets.
 - **Variable Attritable Vehicle Layer:** Distributed fleets of modular, expendable autonomous vehicles (UGV, UAV, UUV) that are cheap enough to be risked, modular enough to be field-repaired, and easy to fabricate or cache for rapid replenishment.
@@ -25,43 +25,43 @@ This system bridges enterprise-grade software with frontline flexibility, allowi
 
 ### 2.1 Hybrid System Design: Fixed vs. Variable Layers
 
-MALN's core innovation is the deliberate separation of fixed, high-value infrastructure from variable, low-cost vehicles, enabling both sophisticated mission orchestration and operational resilience.
+The core innovation here is the deliberate separation of fixed, high-value infrastructure from variable, low-cost vehicles, enabling both sophisticated mission orchestration and operational resilience.
 
 #### Fixed System and Infrastructure Layer
 
-This layer comprises the durable, capital-intensive backbone that supports all vehicle operations:
+This layer comprises the backbone that supports all vehicle operations:
 
 - **Mission Operating System (MOS):** Centralized coordination and planning layer providing multi-leg route planning across air/land/sea domains, DDIL degradation handling, vehicle loss management, and dynamic tasking. The MOS integrates with tactical C2, logistics systems, and commercial WMS where applicable.
-- **Open Standards and Interfaces:** Standardized cargo pod specifications, vehicle docking interfaces, and vehicle autonomy adapters enabling easy integration of diverse unmanned platforms from different OEMs.
-- **Hive and Cache Infrastructure:** Ruggedized FOB cache stations and shoreline/depot hives that provide recharge, pod handoff, local compute, mesh comms, and serve as refit or fallback navigation points.
+- **Open Standards and Interfaces:** Standardized cargo pod specifications, vehicle docking interfaces, and vehicle autonomy adapters enabling easy integration of diverse unmanned platforms from different manufacturers.
+- **Hive and Cache Infrastructure:** Ruggedized cache stations and shoreline/depot hives that provide charging, pod handoff, local compute, mesh comms, and serve as refit or fallback navigation points.
 - **Secure Communications and Monitoring:** Mesh radio networks, backhaul links, encrypted command channels, and real-time fleet health monitoring essential for contested and GPS-denied environments.
 
-This layer represents a one-time, amortizable investment that can support large fleets of vehicles over years of operations, creating vendor lock-in and recurring revenue opportunities.
+This layer represents a one-time investment that can support large fleets of vehicles over years of operations, creating vendor lock-in and recurring revenue opportunities.
 
 #### Variable Attritable Vehicle Layer
 
 The vehicle layer focuses on small, inexpensive, modular unmanned platforms designed to be expendable and easily repaired or replaced on the battlefield:
 
-- **Sub-$5K Unit Cost Target:** Leverages 3D printing, COTS parts, and hot-swappable control modules to minimize per-vehicle cost.
+- **Sub-$10K Unit Cost Target:** Leverages 3D printing, COTS parts, and hot-swappable control modules to minimize per-vehicle cost.
 - **Modular Construction:** All vehicles use standardized compute stacks, power systems, and sensor interfaces that can be rapidly repaired or swapped by operators with minimal training.
 - **Designed for Attritability:** Acceptance that units may be lost to enemy action, environmental hazards, or operational wear without jeopardizing overall mission success. Resilience comes from redundancy and intelligent routing, not from making each platform invulnerable.
 - **Swarm and Redundancy Tactics:** Fleet-level coordination minimizes risk through quantity and flexible rerouting when vehicles are lost, rather than relying on individual platform survivability.
 
 ### 2.2 Vehicle Platforms Overview
 
-MALN vehicles are intentionally simple, optimized around standardized payloads and interfaces rather than bespoke, complex airframes or hulls:
+These vehicles are intentionally simple, optimized around standardized payloads and interfaces rather than bespoke, complex airframes or hulls:
 
-**MALN-G (Ground):** Wheeled or tracked UGV for final-meter delivery, overland routes, and dispersed caching. Target: 15-40 kg payload, 10-20 km range, <$8K unit cost.
+**Ground:** Wheeled or tracked UGV for final-meter delivery, overland routes, and dispersed caching. Target: 15-40 kg payload, 10-20 km range, <$8K unit cost.
 
-**MALN-A (Aerial):** VTOL or fixed-wing UAV for obstacle crossing, terrain-independent routing, and rapid handoffs. Target: 5-15 kg payload, 5-15 km range, <$10K unit cost.
+**Aerial:** VTOL or fixed-wing UAV for obstacle crossing, terrain-independent routing, and rapid handoffs. Target: 5-15 kg payload, 5-15 km range, <$10K unit cost.
 
-**MALN-S (Subsurface):** UUV or small autonomous surface vessel for littoral, riverine, and ship-to-shore operations. Target: 10-25 kg payload, 5-20 km range, <$15K unit cost.
+**Maritime:** UUV or small autonomous surface vessel for littoral, riverine, and ship-to-shore operations. Target: 10-25 kg payload, 5-20 km range, <$15K unit cost.
 
-All three platforms dock to the same standardized hive, carry interchangeable pods, and receive tasking from the unified MOS.
+All three platforms dock to the same standardized hive, carry interchangeable pods, and receive tasking from the unified operating system.
 
 ### 2.3 Hardware Design Philosophy
 
-MALN vehicles prioritize simplicity, modularity, and ease of local repair:
+These vehicles prioritize simplicity, modularity, and ease of local repair:
 
 **Compute:** Jetson Orin Nano or Raspberry Pi CM4 (proven, widely available, low cost).
 
@@ -71,7 +71,7 @@ MALN vehicles prioritize simplicity, modularity, and ease of local repair:
 
 **Chassis and Structure:** 3D-printed or injection-molded plastic components, COTS motors and bearings, modular aluminum or steel brackets. No exotic materials or custom machining required.
 
-**Sensors:** Minimal viable suite: LiDAR or mono camera for obstacle detection, IMU for inertial measurement. Omit expensive redundancy and over-spec components.
+**Sensors:** Minimal viable suite: LiDAR or mono camera for obstacle detection, IMU for inertial measurement.
 
 **Payload Interface:** Universal latching system and power/data connectors that work with any standardized pod.
 
@@ -81,7 +81,7 @@ MALN vehicles prioritize simplicity, modularity, and ease of local repair:
 
 ### 3.1 Core Autonomy Layer
 
-Each MALN vehicle runs a ROS2-based autonomy stack optimized for DDIL operation:
+Each vehicle runs a ROS2-based autonomy stack optimized for Denied operation:
 
 **Navigation and Obstacle Avoidance:**
 - Visual SLAM and inertial measurement for GPS-denied environments.
@@ -110,7 +110,7 @@ The MOS is the command and control brain that orchestrates all vehicles across d
 - Logistician approves, adjusts, or overrides; MOS handles detailed planning and execution.
 
 **Fleet Orchestration and Allocation:**
-- Central scheduler manages available MALN-G, MALN-A, and MALN-S vehicles as a unified pool.
+- Central scheduler manages available vehicles as a unified pool.
 - Automatically allocates missions to vehicles based on payload weight, range, threat level, and availability.
 - Synchronizes multi-leg handoffs: ensures pods arrive at intermediate hives at the right time for the next leg to proceed.
 - Balances utilization across platforms and domains to maximize throughput and minimize idle time.
@@ -148,7 +148,7 @@ The MOS enforces military-grade safety and security:
 
 ### 4.1 Design Philosophy: Attritable Vehicles as Consumables
 
-MALN vehicles are intentionally designed to be expendable and replaceable, not long-lived capital assets. This enables operations in high-threat environments where losses are expected:
+The vehicles are intentionally designed to be expendable and replaceable, not long-lived capital assets. This enables operations in high-threat environments where losses are expected:
 
 **Rapid Fabrication and Caching:**
 - Structural components can be 3D-printed in theater or sourced as COTS parts.
@@ -157,16 +157,16 @@ MALN vehicles are intentionally designed to be expendable and replaceable, not l
 - With basic tools and a printer, a small logistics team can field a replacement vehicle within 1–2 hours.
 
 **Low Unit Cost Absorption:**
-- Sub-$5K per vehicle means that loss of a few units per mission is operationally acceptable and economically justified.
-- Contrast with high-cost platforms (manned helicopters, large UAVs) where each loss is a major command decision; MALN vehicles are consumables like ammunition.
+- Sub-$10K per vehicle means that loss of a few units per mission is operationally acceptable and economically justified.
+- Contrast with high-cost platforms (manned helicopters, large UAVs) where each loss is a major command decision; these vehicles are consumables like ammunition.
 
 **Swarm Resilience Over Individual Survivability:**
 - Resilience derives from fleet redundancy and intelligent routing, not from making each platform armor-plated or heavily defended.
-- When one vehicle is lost, the MOS automatically reassigns its cargo and tasks to remaining fleet members.
+- When one vehicle is lost, the MOS automatically reassigns its mission and tasks to remaining fleet members.
 
 ### 4.2 Field Repair and Sustainment
 
-All MALN vehicles are designed for rapid, low-skill repair in the field:
+All vehicles are designed for rapid, low-skill repair in the field:
 
 **Universal Components and Interfaces:**
 - Hot-swappable compute modules (e.g., swap out a damaged Jetson Nano).
@@ -197,7 +197,7 @@ The universal pod specification is a key standardization lever, enabling all MAL
 
 **Pod Design:**
 - Weight classes: 10 kg, 20 kg, 40 kg, 80 kg (covers Class I through V military supply).
-- Mechanical interface: common latch pattern compatible with all MALN-G, MALN-A, MALN-S dock points.
+- Mechanical interface: common latch pattern compatible with all vehicle dock points.
 - Electrical interface: standardized power and data connectors for battery pods, medical pods, or comms relays.
 - Material: lightweight, ruggedized composite or aluminum frame with rubber shock mounts.
 
@@ -212,7 +212,7 @@ Hives are the fixed, ruggedized infrastructure nodes that serve as the backbone 
 
 **Hive Functions:**
 - **Pod Staging and Charging:** Battery pods, medical pods, and other special cargo can be recharged and inspected before deployment.
-- **Vehicle Docking and Recharge:** All MALN-G, MALN-A, MALN-S vehicles have dedicated charging cradles, reducing charge time and standardizing power management.
+- **Vehicle Docking and Recharge:** All vehicles have dedicated charging cradles, reducing charge time and standardizing power management.
 - **Local Compute and Mesh Hub:** Hive contains a small compute node running a local replica of the MOS, enabling offline operation and mesh relay when higher-level comms is lost.
 - **Secure Storage:** Shelter from observation, weather, and indirect fire; designed for semi-permanent or temporary FOB deployment.
 - **Maintenance and Repair:** Space for component swaps, 3D printing, and basic tool use by logistics personnel.
@@ -226,12 +226,12 @@ Hives are the fixed, ruggedized infrastructure nodes that serve as the backbone 
 
 ## 6. Strategic Advantages: Fixed System, Variable Vehicles
 
-MALN's hybrid architecture yields several strategic and business advantages:
+The hybrid architecture yields several strategic and business advantages:
 
 ### Technical Advantages
 
 - **Software-Centric, Infrastructure-Anchored System:** The MOS, hive network, and pod standards are durable, enterprise-grade assets that integrate into tactical and commercial logistics architectures. Sophistication is concentrated in the mission brain and orchestration, not in individual vehicles.
-- **Hardware Flexibility and Rapid Evolution:** Expendable MALN-G/A/S vehicles can evolve rapidly, be sourced from multiple OEMs, be fabricated in-theater, or be replaced without modifying the core system software.
+- **Hardware Flexibility and Rapid Evolution:** Expendable vehicles can evolve rapidly, be sourced from multiple OEMs, be fabricated in-theater, or be replaced without modifying the core system software.
 - **Open Standards and OEM Partnerships:** Vehicle manufacturers can implement MALN adapters for their platforms, integrating into the unified ecosystem without requiring proprietary integration work.
 
 ### Economic Advantages
@@ -257,7 +257,7 @@ MALN's hybrid architecture yields several strategic and business advantages:
 - Joint Logistics Over-the-Shore (JLOTS) and amphibious logistics doctrines explicitly call for automated tri-domain resupply.
 
 **Allied Forces:**
-- Ukrainian Armed Forces are currently using ad-hoc drones and UGVs for trench resupply; an integrated MALN system would standardize and accelerate deployment.
+- Ukrainian Armed Forces are currently using ad-hoc drones and UGVs for trench resupply; an integrated system would standardize and accelerate deployment.
 - NATO members (Poland, Baltics, Nordic, UK) operating forward-deployed logistics in contested scenarios.
 - Coalition partners (ROK, Japan, Australia) in the Indo-Pacific.
 
@@ -279,7 +279,7 @@ MALN's hybrid architecture yields several strategic and business advantages:
 
 ### Relative to Existing Approaches
 
-| Dimension | Large Cargo UAVs (Skyways, Elroy, KARGO) | Manned Logistics | MALN |
+| Dimension | Large Cargo UAVs (Skyways, Elroy, KARGO) | Manned Logistics | Our System |
 |-----------|------------------------------------------|-----------------|------|
 | **Primary Role** | Middle-mile, 50–200 kg, 100+ km | All-domain, variable payload/range | Last-mile, 10–80 kg, 1–20 km |
 | **Threat Tolerance** | Moderate; expensive platforms at risk | Very low; personnel at high risk | High; cheap, distributed assets expected to attrite |
@@ -322,7 +322,7 @@ MALN's hybrid architecture yields several strategic and business advantages:
 - **Pods:** Custom design to maximize standardization and ease of adoption.
 
 **OEM Partnerships:**
-- Approach major UAV/UGV/USV manufacturers with "implement this autonomy adapter and your platform plugs into the MALN ecosystem."
+- Approach major UAV/UGV/USV manufacturers with "implement this autonomy adapter and your platform plugs into the ecosystem."
 - Publish pod dock and vehicle adapter specifications as open standards to accelerate adoption.
 
 ### Risk and Mitigation
