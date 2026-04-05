@@ -193,7 +193,7 @@ All vehicles are designed for rapid, low-skill repair in the field:
 
 ### 5.1 Standardized Cargo Pods
 
-The universal pod specification is a key standardization lever, enabling all MALN vehicles to carry and transfer cargo without custom rigging:
+The universal pod specification is a key standardization lever, enabling all vehicles to carry and transfer cargo without custom rigging:
 
 **Pod Design:**
 - Weight classes: 10 kg, 20 kg, 40 kg, 80 kg (covers Class I through V military supply).
@@ -232,7 +232,7 @@ The hybrid architecture yields several strategic and business advantages:
 
 - **Software-Centric, Infrastructure-Anchored System:** The MOS, hive network, and pod standards are durable, enterprise-grade assets that integrate into tactical and commercial logistics architectures. Sophistication is concentrated in the mission brain and orchestration, not in individual vehicles.
 - **Hardware Flexibility and Rapid Evolution:** Expendable vehicles can evolve rapidly, be sourced from multiple OEMs, be fabricated in-theater, or be replaced without modifying the core system software.
-- **Open Standards and OEM Partnerships:** Vehicle manufacturers can implement MALN adapters for their platforms, integrating into the unified ecosystem without requiring proprietary integration work.
+- **Open Standards and OEM Partnerships:** Vehicle manufacturers can implement adapters for their platforms, integrating into the unified ecosystem without requiring proprietary integration work.
 
 ### Economic Advantages
 
@@ -342,7 +342,7 @@ The hybrid architecture yields several strategic and business advantages:
 
 Autonomous last-mile logistics in contested environments is a critical gap in modern military operations and an emerging civilian need. No current platform or system automates the final 1–20 km of resupply across sea, air, and ground while handling DDIL, standardizing handoffs, and giving operators simple, high-level control.
 
-MALN addresses this by combining:
+We addresses this by combining:
 
 1. **A sophisticated, centralized mission brain** (MOS) that orchestrates heterogeneous vehicles as a unified logistics network, creating defensible software IP and long-term customer lock-in.
 2. **Standardized hardware layer** (pods, hives, interfaces) that enables rapid vehicle evolution and OEM partnerships, reducing risk and accelerating scale.
